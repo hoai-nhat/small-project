@@ -35,15 +35,5 @@ p9 = browser.find_element_by_xpath("/html/body/div[5]/div[1]/div[1]/ul/li[3]").c
 sleep(100)
 browser.close()
 
-os.mkdir('photo2')
-i =1
-for index,img_link in enumerate(links):
-    if i<=10:
-        img_data = rq.get(img_link).content
-        with open('photo/'+str(index+1)+'.jpg','wb+') as f:
-            f.write(img_data)
-        i+=1
-    else:
-        f.close()
-        break   
+
 
